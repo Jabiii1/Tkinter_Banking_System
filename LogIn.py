@@ -1,7 +1,7 @@
 from customtkinter import *
 
 mainWindow = CTk()
-mainWindow.geometry("350x220")
+mainWindow.geometry("350x250")
 mainWindow.title("CashG Bank System")
 mainWindow.resizable(False, False)
 
@@ -26,14 +26,14 @@ buttonLogIn.pack(pady=5)
 
 #Frame for remember me and forget
 frame1 = CTkFrame(mainWindow)
-frame1.pack(padx=65,fill="both", expand=True)
+frame1.pack(padx=70,fill="both", expand=True)
 
 #Checkbox for remember me
-checkRememberMe = CTkCheckBox(master=frame1, text="Remember Me",font=("Arial", 11), checkbox_height=10, checkbox_width=10, bg_color="#EBEBEB", corner_radius=0)
-checkRememberMe.pack(side=LEFT)
+donate = CTkButton(master=frame1, text="Donate", font=("Arial", 11, "bold"), fg_color="#547792", text_color="#213448", bg_color="#EBEBEB", width=10)
+donate.pack(side=LEFT, padx=5)
 
 #Button for forget the password
-buttonForgot = CTkButton(master=frame1, text="Forgot the password?", font=("Arial", 11), fg_color="transparent", text_color="#213448", height=25, bg_color="#EBEBEB", hover_color="#EBEBEB")
+buttonForgot = CTkButton(master=frame1, text="Forgot the password?", font=("Arial", 11, "bold"), fg_color="transparent", text_color="#547792", bg_color="#EBEBEB")
 buttonForgot.pack(side=LEFT)
 
 #Create an Account Button
