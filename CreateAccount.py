@@ -53,5 +53,5 @@ birthDay.pack(pady=5)
 
 
 birthMonth.configure(command=update_days)
-aaaaaaaaaa
+aeuiuyuuoghjfgjfnjfth
 accWindow.mainloop()
