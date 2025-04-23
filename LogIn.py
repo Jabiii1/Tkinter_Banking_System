@@ -6,7 +6,7 @@ mainWindow = CTk()
 
 mainWindow.geometry("350x220")
 
-mainWindow.title("Welcome to our CashG Bank System!")
+mainWindow.title("CashG Bank System")
 
 mainWindow.resizable(False, False)
 
