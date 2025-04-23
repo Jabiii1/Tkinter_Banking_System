@@ -1,4 +1,5 @@
 from LogIn import logInWindow
+from CreateAccount import accountWindow
 
-app = logInWindow()
-app.run()
+app = accountWindow()
+app.runCreateAccount()
