@@ -1,43 +1,45 @@
 from customtkinter import *
 
-mainWindow = CTk()
-mainWindow.geometry("350x250")
-mainWindow.title("CashG Bank System")
-mainWindow.resizable(False, False)
-
-set_appearance_mode("Light")
-set_default_color_theme("dark-blue")
-
-#LabelLogIn
-labelLogin = CTkLabel(master=mainWindow, text="Log In your CashG Account", font=("Roboto", 24, "bold"), text_color="#031927")
-labelLogin.pack(pady=10)
-
-#Entry for username
-entryUser = CTkEntry(master=mainWindow, width=200, height=24, placeholder_text="Username")
-entryUser.pack(pady=5)
-
-#Entry for password
-entryPass = CTkEntry(master=mainWindow, width=200, height=24, placeholder_text="Password", show="*")
-entryPass.pack(pady=10)
-
-#Button for login
-buttonLogIn = CTkButton(master=mainWindow, text="Log In", font=("Arial", 18, "normal"), text_color="#C8E0F4", fg_color="#031927", hover_color="#189000",width=200)
-buttonLogIn.pack(pady=5)
-
-#Frame for remember me and forget
-frame1 = CTkFrame(mainWindow)
-frame1.pack(padx=70,fill="both", expand=True)
-
-#Checkbox for remember me
-donate = CTkButton(master=frame1, text="Donate", font=("Arial", 11, "bold"), fg_color="#547792", text_color="#213448", bg_color="#EBEBEB", width=10)
-donate.pack(side=LEFT, padx=5)
-
-#Button for forget the password
-buttonForgot = CTkButton(master=frame1, text="Forgot the password?", font=("Arial", 11, "bold"), fg_color="transparent", text_color="#547792", bg_color="#EBEBEB")
-buttonForgot.pack(side=LEFT)
-
-#Create an Account Button
-buttonCreateAcc = CTkButton(mainWindow, text="Create an Account", font=("Arial", 20),text_color="#C8E0F4", height=6, fg_color="#031927",hover_color="#189000", corner_radius=0)
-buttonCreateAcc.pack(fill=X, pady=1)
-
-mainWindow.mainloop()
+class logInWindow:
+    def __init__(self):
+        self.mainWindow = CTk()
+        self.mainWindow.geometry("350x250")
+        self.mainWindow.title("CashG Bank System")
+        self.mainWindow.resizable(False, False)
+        set_appearance_mode("Light")
+        set_default_color_theme("dark-blue")
+        
+        #LabelLogin
+        self.labelLogin = CTkLabel(master=self.mainWindow, text="Log In your CashG Account", font=("Roboto", 24, "bold"), text_color="#031927")
+        self.labelLogin.pack(pady=10)
+        
+        #Entry for username
+        self.entryUser = CTkEntry(master=self.mainWindow, width=200, height=24, placeholder_text="Username")
+        self.entryUser.pack(pady=5)
+        
+        #Entry for password
+        self.entryPass = CTkEntry(master=self.mainWindow, width=200, height=24, placeholder_text="Password", show="*")
+        self.entryPass.pack(pady=10)
+        
+        #Button for login
+        self.buttonLogIn = CTkButton(master=self.mainWindow, text="Log In", font=("Arial", 18, "normal"), text_color="#C8E0F4", fg_color="#031927", hover_color="#189000",width=200)
+        self.buttonLogIn.pack(pady=5)
+        
+        #Frame for remember me and forget
+        self.frame1 = CTkFrame(self.mainWindow)
+        self.frame1.pack(padx=70,fill="both", expand=True)
+        
+        #Checkbutton for remember me
+        self.donate = CTkButton(master=self.frame1, text="Donate", font=("Arial", 11, "bold"), fg_color="#031927", text_color="#C8E0F4", bg_color="#EBEBEB", width=10)
+        self.donate.pack(side=LEFT, padx=5)
+        
+        #Button for forget the password
+        self.buttonForgot = CTkButton(master=self.frame1, text="Forgot the password?", font=("Arial", 11, "bold"), fg_color="transparent", text_color="#547792", bg_color="#EBEBEB")
+        self.buttonForgot.pack(side=LEFT)
+        
+        #Create an Account Button
+        self.buttonCreateAcc = CTkButton(self.mainWindow, text="Create an Account", font=("Arial", 20),text_color="#C8E0F4", height=6, fg_color="#031927",hover_color="#189000", corner_radius=0)
+        self.buttonCreateAcc.pack(fill=X, pady=1)
+        
+    def run(self):
+        self.mainWindow.mainloop()
