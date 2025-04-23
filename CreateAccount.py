@@ -1,5 +1,10 @@
 from customtkinter import *
 
+class accountWindow:
+    def __init__(self):
+        pass
+    
+
 accWindow = CTk()
 accWindow.geometry("420x400")
 accWindow.title("Create an Account")
@@ -47,6 +52,9 @@ surName.pack(pady=5)
 Age = CTkEntry(master=accWindow, placeholder_text="Age")
 Age.pack(pady=5)
 
+sex = CTkComboBox(master=accWindow, values=["Male", "Female"], state="readonly")
+sex.pack(pady=5)
+
 birthMonth = CTkComboBox(master=accWindow, values=months, state="readonly")
 birthMonth.pack(pady=5)
 
@@ -58,4 +66,6 @@ birthYear.pack(pady=5)
 
 birthMonth.configure(command=updateDays)
 
+birthMonth.configure(command=update_days)
+aeuiuyuuoghjfgjfnjfth
 accWindow.mainloop()
