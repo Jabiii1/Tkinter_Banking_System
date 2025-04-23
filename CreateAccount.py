@@ -26,6 +26,8 @@ days = {
     "December": [str(i) for i in range(1, 32)],
 }
 
+years = [str(i) for i in range(1935, 2026)]
+
 def update_days(choice):
     birthDay.configure(values=days[choice])
     birthDay.set(days[choice][0])
@@ -51,7 +53,9 @@ birthMonth.pack(pady=5)
 birthDay = CTkComboBox(master=accWindow, values=days["January"], state="readonly")
 birthDay.pack(pady=5)
 
+birthYear = CTkComboBox(master=accWindow, values=years, state="readonly")
+birthYear.pack(pady=5)
 
 birthMonth.configure(command=update_days)
-aeuiuyuuoghjfgjfnjfth
+
 accWindow.mainloop()
