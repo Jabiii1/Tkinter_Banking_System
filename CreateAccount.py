@@ -66,4 +66,7 @@ birthYear.pack(pady=5)
 
 birthMonth.configure(command=updateDays)
 
+createAccount = CTkButton(master=accWindow, text="Create Account" ,command=inClick)
+createAccount.pack(pady=5)
+
 accWindow.mainloop()
