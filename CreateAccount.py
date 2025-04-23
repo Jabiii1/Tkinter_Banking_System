@@ -9,6 +9,7 @@ set_appearance_mode("light")
 title = CTkLabel(master=accWindow, text="Create your Account!",font=("Roboto", 24, "bold"), text_color="#031927")
 title.pack(pady=10)
 
-Fname = CTkEntry
+firstName = CTkEntry(master=accWindow, placeholder_text="First Name")
+firstName.pack(pady=5)
 
 accWindow.mainloop()
