@@ -29,7 +29,7 @@ frame1 = CTkFrame(mainWindow)
 frame1.pack(padx=70,fill="both", expand=True)
 
 #Checkbox for remember me
-donate = CTkButton(master=frame1, text="Donate", font=("Arial", 11, "bold"), fg_color="#547792", text_color="#213448", bg_color="#EBEBEB", width=10)
+donate = CTkButton(master=frame1, text="Donate", font=("Arial", 11, "bold"), fg_color="#031927", text_color="#C8E0F4", bg_color="#EBEBEB", width=10)
 donate.pack(side=LEFT, padx=5)
 
 #Button for forget the password
