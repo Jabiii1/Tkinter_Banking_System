@@ -22,7 +22,7 @@ class logInWindow:
         self.entryPass.pack(pady=10)
         
         #Button for login
-        self.buttonLogIn = CTkButton(master=self.mainWindow, text="Log In", font=("Arial", 18, "normal"), text_color="#C8E0F4", fg_color="#031927", hover_color="#189000",width=200)
+        self.buttonLogIn = CTkButton(master=self.mainWindow, text="Log In", font=("Arial", 18, "normal"), text_color="#C8E0F4", fg_color="#031927", hover_color="#189000",width=200, command=self.mainWindow.quit)
         self.buttonLogIn.pack(pady=5)
         
         #Frame for remember me and forget
@@ -43,3 +43,6 @@ class logInWindow:
         
     def run(self):
         self.mainWindow.mainloop()
+        
+    def getEntryUser(self):
+        return self.entryUser.get()
