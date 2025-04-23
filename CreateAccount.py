@@ -66,6 +66,4 @@ birthYear.pack(pady=5)
 
 birthMonth.configure(command=updateDays)
 
-birthMonth.configure(command=update_days)
-aeuiuyuuoghjfgjfnjfth
 accWindow.mainloop()
