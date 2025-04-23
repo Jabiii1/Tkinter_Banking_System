@@ -1,5 +1,10 @@
 from customtkinter import *
 
+class logInWindow:
+    def __init__(self):
+        self.mainWindow = CTk()
+        self.mainWindow.geometry("350x250")
+    
 mainWindow = CTk()
 mainWindow.geometry("350x250")
 mainWindow.title("CashG Bank System")
