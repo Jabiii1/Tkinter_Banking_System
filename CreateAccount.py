@@ -59,6 +59,5 @@ birthMonth.pack(pady=5)
 birthDay = CTkComboBox(master=accWindow, values=days["January"], state="readonly")
 birthDay.pack(pady=5)
 
-
 birthMonth.configure(command=update_days)
 accWindow.mainloop()
