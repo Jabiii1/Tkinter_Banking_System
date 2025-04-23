@@ -43,3 +43,6 @@ class logInWindow:
         
     def run(self):
         self.mainWindow.mainloop()
+        
+    def getEntryUser(self):
+        return self.entryUser.get()
