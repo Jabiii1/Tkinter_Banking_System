@@ -5,3 +5,8 @@ Tkinter_Banking_System
 <!--LaterOn-->
 <!-- archipelago, Religion, Province, City, Brgy, Street, House No. -->
 <!-- Valid ID, PSA, Brgy Clearance -->
+
+
+# 26/04/2025
+<!-- Test lang yung user data at yung nasa main file na -->
+<!-- Dipa nagsstore yung value sa excel -->
