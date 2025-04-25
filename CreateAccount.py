@@ -38,22 +38,16 @@ class accountWindow:
         #Years
         self.years = [str(i) for i in range(1935, 2026)]
         
-        self.title = CTkLabel(master=self.accWindow, text="Create your Account!",font=("Roboto", 24, "bold"), text_color="#031927")
+        self.title = CTkLabel(master=self.accWindow, text="Create your\n Account!",font=("Roboto", 24, "bold"), text_color="#031927")
         self.title.pack(pady=10)
 
-        self.firstName = CTkEntry(master=self.accWindow, placeholder_text="First Name")
-        self.firstName.pack(pady=5)
+        self.fullName = CTkEntry(master=self.accWindow, placeholder_text="Full Name", corner_radius=20, width=250, height=30)
+        self.fullName.pack(pady=5)
 
-        self.middleName = CTkEntry(master=self.accWindow, placeholder_text="Middle Name")
-        self.middleName.pack(pady=5)
-
-        self.surName = CTkEntry(master=self.accWindow, placeholder_text="Surname")
-        self.surName.pack(pady=5)
-
-        self.Age = CTkEntry(master=self.accWindow, placeholder_text="Age")
+        self.Age = CTkEntry(master=self.accWindow, placeholder_text="Age", corner_radius=20, height=30)
         self.Age.pack(pady=5)
 
-        self.sex = CTkComboBox(master=self.accWindow, values=["Male", "Female"], state="readonly")
+        self.sex = CTkComboBox(master=self.accWindow, values=["Male", "Female"], state="readonly", corner_radius=20)
         self.sex.pack(pady=5)
 
         self.birthMonth = CTkComboBox(master=self.accWindow, values=self.months, state="readonly")
