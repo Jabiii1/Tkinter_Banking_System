@@ -8,9 +8,10 @@ app.runCreateAccount()
 name = app.getName()
 print(name)
 
+#Test ng Database
 wb = load_workbook("Userdata.xlsx")
-ws= wb["User Database"]
-ws.append = ([name, name , name])
+sheet = wb.active
+sheet["A2"] = name
 wb.save("Userdata.xlsx")
 
-print("Successfullu Done")
+print("Successfully Done")
