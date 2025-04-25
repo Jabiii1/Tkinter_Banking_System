@@ -1,4 +1,5 @@
 from customtkinter import *
+from PIL import Image
 
 class accountWindow:
     def __init__(self):
@@ -12,6 +13,11 @@ class accountWindow:
         self.accWindow.title("Create an Account")
         self.accWindow.resizable(False, False)
         set_appearance_mode("light")
+        
+        self.backGroundImage = CTkImage(light_image=Image.open('images/background.png'),
+                                        dark_image=Image.open('images/background.png'), size=(420, 400))
+        
+        self.myLabel = CTkLabel(master=self.accWindow, text="", image=self.backGroundImage).place(x=0, y=0)
 
         #Months
         self.months = [
@@ -61,7 +67,7 @@ class accountWindow:
 
         self.birthMonth.configure(command=updateDays)
 
-        self.createAccount = CTkButton(master=self.accWindow, text="Create Account", font=("Roboto", 14, "bold"), text_color="#FFFFFF")
+        self.createAccount = CTkButton(master=self.accWindow, text="Create Account", font=("Roboto", 14, "bold"))
         self.createAccount.pack(pady=5)
     
     def runCreateAccount(self):
