@@ -3,7 +3,7 @@ from PIL import Image
 
 class accountWindow:
     def __init__(self):
-        
+    
         def updateDays(choice):
             self.birthDay.configure(values=self.days[choice])
             self.birthDay.set(self.days[choice][0])
@@ -67,8 +67,11 @@ class accountWindow:
 
         self.birthMonth.configure(command=updateDays)
 
-        self.createAccount = CTkButton(master=self.accWindow, text="Create Account", font=("Roboto", 14, "bold"))
+        self.createAccount = CTkButton(master=self.accWindow, text="Create Account", font=("Roboto", 14, "bold"), command=self.accWindow.quit)
         self.createAccount.pack(pady=5)
     
     def runCreateAccount(self):
         self.accWindow.mainloop()
+        
+    def getName(self):
+        return self.fullName.get()

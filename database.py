@@ -1,4 +1,4 @@
-from openpyxl import Workbook
+from openpyxl import *
 from customtkinter import *
 
 workBook = Workbook()
